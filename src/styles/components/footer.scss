@@ -1,0 +1,19 @@
+.footer {
+    width: max-content;
+    color: #52734D;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 40px auto 0px;
+    font-family: Cookie, cursive;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: #DDFFBC;
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    text-align: center;
+}
+
+@media (max-width: 568px) {
+    .footer {
+        font-size: 2rem;
+    }
+}

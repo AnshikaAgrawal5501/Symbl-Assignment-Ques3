@@ -1,0 +1,39 @@
+.board {
+    margin-bottom: 50px;
+}
+
+.leaft,
+.leafb {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.leaft {
+    top: 0;
+}
+
+.leafb {
+    bottom: 0;
+}
+
+@media (max-width: 992px) {
+    .board {
+        width: 75%;
+    }
+    .leaft,
+    .leafb {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 568px) {
+    .board {
+        width: 85%;
+    }
+    .leaft,
+    .leafb {
+        height: 30vh;
+    }
+}
