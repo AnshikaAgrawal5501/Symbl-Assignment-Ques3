@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { trackPromise } from 'react-promise-tracker';
 
 function App() {
+
+  const [users,setUsers]=React.useState([]);
+
+  function func(){
+    trackPromise(
+            fetch('https://externship-example-api.herokuapp.com/data')
+                .then(async function(userDetails) {
+                    const users=await userDetails.json();
+                    console.log('12',users);
+                    setUsers(users);
+                })
+        )
+  }
+
+  
+
+  // const data=await fetch('https://externship-example-api.herokuapp.com/data').then((data)=>{return data});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+
+    <input type="button" value="" onClick={func} />
+      {
+        users.map((item)=>{
+          return <p>{item.name}</p>;
+        })
+      }
     </div>
   );
 }
