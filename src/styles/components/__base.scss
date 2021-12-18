@@ -4,3 +4,32 @@ body {
     position: relative;
     padding-bottom: 30px;
 }
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #DDFFBC;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #91C788;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #52734D;
+}

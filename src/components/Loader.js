@@ -5,7 +5,7 @@ function LoadingIndicator () {
     
     const loadStyle={
                 width: "100%",
-                height: "75vh"
+                height: "60vh"
             };
 
     return (

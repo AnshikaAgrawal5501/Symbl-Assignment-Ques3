@@ -2,7 +2,6 @@ import React from "react";
 import { trackPromise } from 'react-promise-tracker';
 import LoadingIndicator from './Loader';
 import DataItem from "./DataItems";
-import 'aos/dist/aos.css';
 
 const Data = () => {
 
@@ -26,8 +25,8 @@ const Data = () => {
         <>
             {
                 isloading ? <LoadingIndicator /> : 
-                data.map((item, index) => {
-                    return <DataItem key={index} name={item.name} />
+                data.map((item) => {
+                    return <DataItem key={item.id} id={item.id} name={item.name} />
                 })
             }
         </>

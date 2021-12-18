@@ -1,21 +1,18 @@
 import React from "react";
-import Zoom from '@mui/material/Zoom';
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
-const DataItem = (props) => {
-
-    const [checked, setChecked] = React.useState(false);
+const DataItem = ({id, name}) => {
 
     React.useEffect(() => {
-        setChecked(true)
+        Aos.init({duration:1000});
     });
 
     return (
         <>
-            <Zoom in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
-                <div className="items">
-                    <p>{props.name}</p>
-                </div>
-            </Zoom>
+            <div data-aos={ id%2 === 0? 'zoom-in-left':'zoom-in-right' } className="items">
+                <p>{id+'. '+name}</p>
+            </div>
         </>
     );
 };
